@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Main Styles -->
+
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 id="god-bless-title" class="title">Welcome</h1>
+    </div>
+
+    <script>
+        // Wait for the 'God Bless' title to be clicked
+        document.getElementById('god-bless-title').addEventListener('click', function() {
+            // Apply the zoom-in animation
+            document.body.classList.add('zoom-in');
+            
+            // After the animation ends (0.5s), navigate to lobby.html
+            setTimeout(function() {
+                window.location.href = 'lobby.html';
+            }, 500); // This matches the animation duration
+        });
+    </script>
+</body>
+</html>

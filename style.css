@@ -1,0 +1,96 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    overflow: hidden; /* Prevent overflow on animation */
+}
+
+/* Container to center the content */
+.container {
+    text-align: center;
+    width: 100%;  /* Ensure full width */
+    height: 100%;  /* Ensure full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-out; /* Fade-in animation */
+}
+
+/* Title Styling */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #ffffff; /* Default text color */
+    text-transform: uppercase;
+    text-shadow: #fff; /* Soft white glow */
+    animation: textGlow 1.5s ease-in-out infinite alternate; /* Glowing effect */
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect - Scale, color change, and stronger glow */
+.title:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    color: #0f0; /* Light blue color on hover */
+    text-shadow: 4px 4px 30px rgba(0, 0, 0, 0.6), 0 0 40px #0f2, 0 0 10px #0f9; /* Intensify glow */
+}
+
+/* Keyframes for Fade-In Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for Glowing Text Animation */
+@keyframes textGlow {
+    0% {
+        text-shadow: #fff; /* Soft glow */
+    }
+    100% {
+        text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4), 0 0 25px #0f0, 0 0 10px #0f5; /* More intense glow */
+    }
+}
+
+/* Optional: Add a cursor pointer for hover */
+.title:hover {
+    cursor: pointer;
+}
+
+/* Link Styling */
+.title-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from title */
+}
+
+/* Zoom-In Animation for the index.html page */
+.zoom-in {
+    animation: zoomInEffect 0.5s ease-in-out forwards;
+}
+
+@keyframes zoomInEffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}

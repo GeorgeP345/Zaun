@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Jinx</title>
+    <link rel="stylesheet" href="lobby.css">
+    <style>
+        /* Additional styling for contactMe page */
+        body {
+            background-color: #1A1A1A; /* Dark background for contrast */
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative; /* For absolute positioning of images */
+        }
+
+        /* Use Google Font for Jinx vibe */
+        @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+        /* Navbar Styling */
+        .navbar {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8); /* Transparent black background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-left a,
+        .nav-right a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-left a:hover,
+        .nav-right a:hover {
+            color: #ff00ff; /* Gold for hover effect */
+            transform: scale(1.05);
+        }
+
+        /* Main Content Styling */
+        .content {
+            text-align: center;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Jinx Title with Rock Salt font */
+        .contact-title {
+            font-size: 3.5rem;
+            font-family: 'Rock Salt', cursive; /* Using Rock Salt font */
+            font-weight: bold;
+            color: #ff00ff; /* Jinx's signature bright color */
+            text-shadow: 2px 2px 5px rgba(11, 105, 228, 0.5);
+            margin-top: 50px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            animation: glitch 1.5s infinite; /* Glitch effect */
+        }
+
+        /* Glitch effect animation */
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px 5px rgba(11, 105, 228, 0.5), -1px 0px 0px rgba(0, 0, 0, 0.5), 1px 0px 10px rgba(11, 105, 228, 0.5);
+                transform: translate(2px, 2px);
+            }
+            20% {
+                text-shadow: -2px -2px 5px rgba(11, 105, 228, 0.5), 1px 1px 0px rgba(11, 105, 228, 0.5), -1px -1px 15px rgba(11, 105, 228, 0.5);
+                transform: translate(-3px, -3px);
+            }
+            100% {
+                text-shadow: rgba(11, 105, 228, 0.5), 1px 0px 10px rgba(11, 105, 228, 0.5), -1px 0px 0px rgba(0, 0, 0, 0.5);
+                transform: translate(2px, 2px);
+            }
+        }
+
+        /* Form Styling */
+        .contact-form {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for the form */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 2px solid #4895BF;
+            outline: none;
+        }
+
+        .jinxed {
+            font-size: 3.5rem;
+            font-family: 'Rock Salt', cursive; /* Using Rock Salt font */
+            font-weight: bold;
+            color: #ff00ff; /* Jinx's signature bright color */
+            text-shadow: 2px 2px 5px rgba(255, 0, 255, 0.5);
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            animation: glitch 1.5s infinite; /* Glitch effect */
+        }
+
+        .contact-form button {
+            background-color: #4895BF;
+            color: #000;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff00ff;
+        }
+
+        /* Social Media Links Styling */
+        .social-links {
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #4895BF;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2.5rem;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                width: 90%;
+            }
+
+            .contact-form button {
+                width: 90%;
+            }
+        }
+
+        /* Jinx-themed Icon Spray (on the sides) */
+        .jinx-spray {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.5;
+            z-index: 0;
+            max-width: 20%; /* Ensure the images do not overflow */
+        }
+
+        /* Left Spray - Move closer to center */
+        .jinx-spray-left {
+            left: 0%; /* Center it horizontally */
+            animation: floatLeft 6s ease-in-out infinite;
+        }
+
+        /* Right Spray - Move closer to center */
+        .jinx-spray-right {
+            right: 0%; /* Center it horizontally */
+            animation: floatRight 6s ease-in-out infinite;
+        }
+
+        /* Animations for spray effect */
+        @keyframes floatLeft {
+            0% {
+                transform: translateY(-50%) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-45%) rotate(10deg);
+            }
+            100% {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+
+        @keyframes floatRight {
+            0% {
+                transform: translateY(-50%) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-45%) rotate(-10deg);
+            }
+            100% {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="aboutMe.html">About Me</a>
+                <a href="contactMe.html">Contact Me</a>
+            </div>
+            <div class="nav-right">
+                <a href="lobby.html">Lobby</a>
+                <a href="index.html">Goodbye</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <!-- Contact Title -->
+        <div class="contact-title">Contact Me HAHAHAHA</div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="jinxed">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://youtu.be/0nlJuwO0GDs?si=gDNxIuQ54vzNuWh7" target="_blank" class="jinxed">YouTube</a>
+            <!-- <a href="https://github.com" target="_blank" class="jinxed">GitHub</a> -->
+            <a href="https://www.instagram.com/arcaneshow?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="jinxed">Instagram</a>
+        </div>
+    </div>
+
+    <!-- Jinx Icon Spray Images (Left and Right) -->
+    <img src="Spray.png" alt="Jinx Spray" class="jinx-spray jinx-spray-left">
+    <img src="Moneky.png" alt="Monkey Toy" class="jinx-spray jinx-spray-right">
+
+</body>
+</html>

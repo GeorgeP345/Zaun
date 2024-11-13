@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby - Master Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+
+    <!-- Fullscreen Wrapper for Visual Aesthetics -->
+    <div class="visual-container">
+        
+        <!-- Navbar (Static) -->
+        <header class="navbar">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a href="aboutMe.html" class="nav-link">About Me</a>
+                    <a href="contactMe.html" class="nav-link">Contact Me</a>
+                </div>
+                <div class="nav-right">
+                    <a href="lobby.html" class="nav-link lobby">Lobby</a>
+                    <a href="index.html" class="nav-link goodbye">Goodbye</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Fullscreen Background Video -->
+        <div class="background-effect">
+            <!-- Video element with autoplay, muted and loop attributes -->
+            <video autoplay muted loop id="background-video">
+                <source src="Arcane - Entering Zaun scene.mp4" type="video/mp4"> <!-- Make sure to replace the path -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </div>
+
+</body>
+</html>

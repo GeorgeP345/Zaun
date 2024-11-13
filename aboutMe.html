@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Zaun</title>
+    <link rel="stylesheet" href="lobby.css">
+    <style>
+        /* Additional styling for aboutMe page */
+        body {
+            background-color: #121212; /* Dark background to keep the theme consistent */
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px; /* Adjust logo size as needed */
+            margin-bottom: 30px;
+        }
+
+        .city-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #00ff00; /* Zaun's vibrant color */
+            margin-bottom: 20px;
+        }
+
+        /* City Description Styling with Border */
+        .city-description {
+            font-size: 1.2rem;
+            color: #dcdcdc;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 3px solid #0f0; /* Green border */
+            border-radius: 10px; /* Rounded corners */
+            background-color: rgba(0, 0, 0, 0.7); /* Slight transparent black background */
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Subtle glow effect */
+        }
+
+        .back-button {
+            background-color: #0f0;
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 30px;
+            display: inline-block;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #fff;
+            color: #0f0;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .city-title {
+                font-size: 2rem;
+            }
+
+            .city-description {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+
+            .logo {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section (Keep this consistent with your existing navbar) -->
+    <div class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="aboutMe.html">About Me</a>
+                <a href="contactMe.html">Contact Me</a>
+            </div>
+            <div class="nav-right">
+                <a href="lobby.html" class="lobby">Lobby</a>
+                <a href="index.html">Goodbye</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <!-- Zaun Logo -->
+        <img src="Zaun_Crest.png" alt="Zaun Logo" class="logo"> 
+
+        <!-- City Title -->
+        <div class="city-title">Welcome to Zaun</div>
+
+        <!-- City Description with Border -->
+        <div class="city-description">
+            Zaun is a city known for its unrestrained innovation and technological advancements, but at the cost of pollution, corruption, and social divide. The streets are filled with steam vents, towering factories, and a populace that thrives in the city's darker corners. The people of Zaun are resourceful and often ruthless, constantly innovating through the chaos to push the boundaries of science and technology. Here, the line between science and madness is thin, and many Zaunites walk it daily.
+        </div>
+    </div>
+
+</body>
+</html>
